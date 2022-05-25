@@ -27,17 +27,19 @@ predefined_args = {
 ```
 
 ### model file
+``` shell
 git clone https://huggingface.co/monologg/kobert
-
+```
 ## BERT-Classification
 
 ### Train
+``` python
 python main.py
-
+```
 ### 분류 개수 조절
 
 Trainer.py 
-
+``` python
 class BERTClassifier(nn.Module):
     def __init__(self,
                  bert,
@@ -48,10 +50,12 @@ class BERTClassifier(nn.Module):
         super(BERTClassifier, self).__init__()
         self.bert = bert
         self.dr_rate = dr_rate
+```
 
 ### Predict
+``` python
 python predict.py
-
+```
 ### input
 sample_input.txt 파일에 분석할 문장을 입력합니다.
 
